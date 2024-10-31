@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Honey"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Адаптивне меню з іконками -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Honey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Контакти</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Модальне вікно для Sign in -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Форма автентифікації</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Ім'я користувача</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секція відгуків -->
+    <section class="testimonials container my-5">
+        <h2 class="text-center mb-4">Відгуки наших клієнтів</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-item p-3 border rounded shadow-sm">
+                    <p>"Найкраще місце для відпочинку з сім'єю. Дуже смачно і затишно!"</p>
+                    <span>– Ольга, Київ</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-item p-3 border rounded shadow-sm">
+                    <p>"Дуже приємне обслуговування і неймовірно смачні десерти!"</p>
+                    <span>– Андрій, Львів</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-item p-3 border rounded shadow-sm">
+                    <p>"Рекомендую всім, хто цінує хорошу атмосферу і якісну їжу."</p>
+                    <span>– Наталія, Харків</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кнопка для повернення вгору -->
+    <button class="scroll-top-button" onclick="scrollToTop()">⬆</button>
+
+    <!-- Bootstrap та власний скрипт -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
